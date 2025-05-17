@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Finder</title>
+    <meta name="description" content="A website to expand your knowledge on animals across the globe.">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Animal Finder</h1>
+            <img src="images/dark-mode.png" id="themeBtn">
+        </div>
+        <div id="searchContainer">
+            <input id="searchInput" type="text" placeholder="Search an animal here" id="">
+            <ul id='searchHistory' class="searchHistory">Most Recent Searches:</ul>
+        </div>
+    </header>
+    <div class="categories">
+        <div class="mammals">
+            <h2>Mammals</h2>
+        </div>
+        <div class="birds">
+            <h2>Birds</h2>
+        </div>
+        <div class="reptiles">
+            <h2>Reptiles</h2>
+        </div>
+        <div class="insects">
+            <h2>Insects</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main">
+            <h2 id="allAnimalsBtn">All Animals (A-Z)</h2>
+        </div>
+    </div>
+    <script src="theme.js"></script>
+    <script src="animals.js"></script>
+    <script src="script.js"></script>
+    <script src="greet.js"></script>
+    <script src="timer.js"></script>
+</body>
+</html>

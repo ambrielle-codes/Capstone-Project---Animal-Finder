@@ -1,0 +1,270 @@
+/* default styles and colors*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color ease-in-out .2s;
+}
+
+
+:root {
+    --accent: orange;
+    --header-bg: white;
+    --bg: rgb(238, 238, 238);
+    --secondary: rgb(104, 104, 104);
+    --card-bg: white;
+    --card-text: black;
+    --categories-text: rgba(0, 0, 0, 0.5);
+    --mammals: rgb(255, 123, 125);
+    --birds: rgb(117, 216, 255);
+    --reptiles:rgb(68, 171, 111);
+    --insects: rgb(239, 218, 96);
+}
+
+.dark{
+    --accent: rgb(184, 90, 255);
+    --header-bg: black;
+    --bg: rgb(37, 37, 37);
+    --secondary: rgb(133, 133, 133);
+    --card-bg: black;
+    --card-text: white;
+    --categories-text: white;
+    --mammals: rgb(255, 23, 27);
+    --birds: rgb(0, 149, 208);
+    --reptiles:rgb(0, 128, 0);
+    --insects: rgb(232, 197, 0);
+}
+
+/* containers and container styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .75em 0;
+}
+
+.container h2 {
+    padding-bottom: .75em;
+    font-weight: normal;
+    color: var(--secondary);
+}
+
+.main {
+    width: 90%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1em;
+}
+
+/* Header styles */
+
+header {
+    color: var(--accent);
+    padding: 1.5em 1em 0 1em;
+    position: sticky;
+    display: grid;
+    gap: .5em;
+    grid-template-rows: auto auto;
+    background-color: var(--header-bg);
+}
+
+header h1 {
+    display: inline;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Search bar area styles*/
+
+#searchContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"]{ /* search bar */
+    width: 100%;
+    padding: .5em;
+    text-align: left;
+    border-radius: 15px;
+    border: 3px solid var(--accent);
+    background-color: var(--header-bg);
+    color: var(--card-text);
+}
+
+input:focus {
+    border-color: var(--card-text);
+    outline: none;
+}
+
+.searchHistory {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    padding: .75em;
+}
+
+.searchHistory > li:hover{ /* search history terms */
+    color: var(--card-text);
+    transition: none;
+}
+
+/* Button styles*/
+
+#themeBtn{
+    height: 40px;
+    padding: .35em;
+    font-size: 1.5rem;
+   background-color:black;
+   border-radius: 5px;
+   border: none;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+.categories  h2 {
+    text-align: center;
+    padding: .5em 0;
+    font-weight: bold;
+    color: var(--categories-text)
+}
+
+.mammals h2 {
+    background-color: var(--mammals)
+}
+.birds h2 {
+    background-color: var(--birds)
+}
+.reptiles h2 {
+    background-color: var(--reptiles)
+}
+.insects h2 {
+    background-color: var(--insects)
+}
+
+.selected {
+    transform: translateY(-.2em);
+    font-size: 1.2em;
+    transition: transform ease-out .1s;
+}
+
+.allAnimalsBtn:hover {
+    color: var(--card-text);
+}
+
+/* animal cards */
+
+.card {
+    background-color: var(--card-bg);
+    font-size: .8rem;
+    padding: .5em .75em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    color: var(--card-text);
+}
+
+.card h1 {
+    border-bottom: 1px solid var(--card-text);
+    padding-bottom: .25em;
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.information > div {
+    width: 100%;
+    padding: .25em;
+    word-wrap: break-word;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1.5/1;
+}
+
+/* media queries and responsiveness */
+
+@media screen and (max-width: 768px) {
+    .categories{
+        font-size: .8rem;
+    }
+
+    .main {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .searchHistory {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    .card p {
+        text-align: left;
+    }
+
+    .information {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+
+    .content {
+        grid-template-columns: repeat(2, 1fr); /* content grid responsive tweak */
+    }
+
+    .card {
+        font-size: 1rem;
+    }
+
+
+    .card p {
+        text-align: left;
+    }
+
+    .information {
+        justify-content: space-between;
+    }
+}
