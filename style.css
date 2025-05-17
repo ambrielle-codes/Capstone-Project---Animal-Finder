@@ -114,7 +114,7 @@ input:focus {
     outline: none;
 }
 
-.searchHistory {
+.search-history {
     display: flex;
     gap: 1em;
     list-style: none;
@@ -169,7 +169,7 @@ input:focus {
     transition: transform ease-out .1s;
 }
 
-.allAnimalsBtn:hover {
+.all-animals-btn:hover {
     color: var(--card-text);
 }
 
@@ -231,7 +231,7 @@ input:focus {
         align-items: center;
     }
 
-    .searchHistory {
+    .search-history {
         flex-wrap: wrap;
     }
 

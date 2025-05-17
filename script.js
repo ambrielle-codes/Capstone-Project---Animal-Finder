@@ -84,7 +84,7 @@ function searchByClass(animalClass){
 function returnButton(){
     // change "All Animals (A-Z)" text into a button to clear search/go back to all animals
     allAnimalsBtn.textContent = '⬅ Return to All Animals';
-    allAnimalsBtn.className = 'allAnimalsBtn';
+    allAnimalsBtn.className = 'all-animals-btn';
     allAnimalsBtn.addEventListener('click', renderAllAnimals);
 }
 
