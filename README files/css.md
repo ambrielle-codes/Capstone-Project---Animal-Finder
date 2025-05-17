@@ -36,7 +36,7 @@
 19. Naming Conventions (BEM/Readable) -> ```.selected ```
 20. Cleanliness & Commenting -> 
 ```css
-.searchHistory > li:hover{ /* search history terms */
+.search-history > li:hover{ /* search history terms */
     color: var(--card-text);
     transition: none;
 }
